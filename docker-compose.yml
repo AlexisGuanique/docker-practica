@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  calculadora:
+    container_name: calculadora
+    build:
+      context: ./calculadora/
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    restart: always
+
+  formulario-validacion:
+    container_name: formulario-validacion
+    build:
+      context: ./formulario-validacion/
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80"
+    restart: always
+
+  tienda-ropa:
+    container_name: tienda-ropa
+    build:
+      context: ./tienda-ropa/
+      dockerfile: Dockerfile
+    ports:
+      - "5003:80"
+    restart: always
